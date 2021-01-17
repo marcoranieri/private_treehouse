@@ -1,3 +1,12 @@
-<p><%= @idea.category %></p>
+<%= link_to "<< back", ideas_path %>
+
+<% if @idea.tag_list.present? %>
+  <ul class="idea-tag-list">
+    <% @idea.tag_list.each do |tag| %>
+      <li><%= tag %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h1><%= @idea.title %></h1>
 <p><%= @idea.description %></p>

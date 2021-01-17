@@ -11,3 +11,80 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.main-wrapper {
+  background: $white;
+  color: $black;
+}
+
+.header {
+  color: $main;
+}
+
+.sub-header {
+
+  span {
+    color: $main;
+  }
+}
+
+.ideas-wrapper {
+
+  .idea-title-link {
+
+  }
+}
+
+.main-color { color: $main !important; }
+
+
+// CARD from LW UI Kit
+.card-product {
+  position: relative;
+  height: min-content;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product > a img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  filter: sepia(80%);
+  // filter: hue-rotate(180deg);
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+// -- CARD
+
+// AVATAR from LW UI Kit
+.owner-avatar {
+  position: absolute;
+  right: 0;
+  top: -15px;
+}
+.avatar-bordered {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: $main 1px solid;
+}
+// -- AVATAR

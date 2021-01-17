@@ -1,17 +1,42 @@
-<h1>Welcome to the IDEAS space</h1>
-<p>to <span>Share</span> & <span>Debate</span> like no tomorrow ☺️</p>
+<h1>Welcome to the <span class="main-color">IDEAs</span> space</h1>
+<p class="sub-header text-right">...to <span class="main-color">Share</span> & <span class="main-color">Debate</span> like no tomorrow ☺️</p>
 
 <hr>
 
-<div class="idea-wrapper">
+<div class="ideas-wrapper">
 
   <% @ideas.each do |idea| %>
-    <% if idea.category.present? %>
-      <div class="idea-category"><%= idea.category %></div>
-    <% end %>
 
-    <h4 class="idea-title"><%= idea.title %></h4>
-    <p class="idea-description"><%= idea.description %></p>
+
+    <div class="card-product">
+      <div class="owner-avatar">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.github_username ? current_user.github_username : "ssaunier"}", class: "avatar-bordered", alt: "avatar" %>
+      </div>
+
+      <%= link_to idea_path(idea) do %>
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+      <% end %>
+
+      <div class="card-product-infos">
+
+        <%= link_to idea_path(idea), class: "idea-title-link main-color" do %>
+          <h4 class="idea-title"><%= idea.title %></h4>
+        <% end %>
+
+        <% if idea.tag_list.present? %>
+          <ul class="idea-tag-list">
+            <% idea.tag_list.each do |tag| %>
+              <li><%= tag %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
+        <p class="idea-description"><%= idea.description %></p>
+
+      </div><!-- card-product-infos -->
+
+    </div> <!-- card-product -->
+
 
     <hr>
   <% end %>

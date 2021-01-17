@@ -1,8 +1,6 @@
 class Idea < ApplicationRecord
-  belongs_to :user
+  acts_as_votable
+  acts_as_taggable_on :tags
 
-  @@category = %w(
-    UX
-    UI
-  )
+  belongs_to :user
 end

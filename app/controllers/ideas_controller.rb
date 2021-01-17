@@ -18,7 +18,7 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:title, :description, :category)
+    params.require(:idea).permit(:title, :description, :tag_list)
   end
 
   def set_idea
