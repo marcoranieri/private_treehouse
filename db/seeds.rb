@@ -9,7 +9,7 @@ end
 
 first_idea = Idea.first
 first_idea.tag_list.add("UX")
-first_idea.first.tag_list.add("UI")
+first_idea.tag_list.add("UI")
 first_idea.save!
 
 puts "User created (#{User.count})"
