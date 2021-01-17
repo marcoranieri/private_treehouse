@@ -12,6 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+
+body {
+  background: $white;
+  color: $black;
+}
 .main-wrapper {
   background: $white;
   color: $black;
@@ -88,3 +93,5 @@
   border: $main 1px solid;
 }
 // -- AVATAR
+
+li:before { content: '\1F525'; margin-left: -20px; margin-right: 10px; }

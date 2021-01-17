@@ -14,7 +14,15 @@
       </div>
 
       <%= link_to idea_path(idea) do %>
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <%#= raise %>
+        <% if idea&.photos&.attached? %>
+          <%#= cl_image_tag @idea.photo.key, height: 300, width: 400, crop: :fill %>
+          <% idea.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
+        <% else %>
+          <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <% end %>
       <% end %>
 
       <div class="card-product-infos">

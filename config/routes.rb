@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :ideas, only: [:index, :show]
+  resources :ideas
 
   get "info", to: "pages#info"
 

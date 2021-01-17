@@ -25,6 +25,8 @@ gem 'redis', '~> 4.0'
 gem 'acts_as_votable'
 gem 'acts-as-taggable-on', '~> 7.0'
 
+gem 'cloudinary', '~> 1.16.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
