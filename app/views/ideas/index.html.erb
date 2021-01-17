@@ -13,12 +13,10 @@
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.github_username ? current_user.github_username : "ssaunier"}", class: "avatar-bordered", alt: "avatar" %>
       </div>
 
-      <%= link_to idea_path(idea) do %>
-        <%#= raise %>
+      <%= link_to idea_path(idea), class: "link-images" do %>
         <% if idea&.photos&.attached? %>
-          <%#= cl_image_tag @idea.photo.key, height: 300, width: 400, crop: :fill %>
           <% idea.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag photo.key, secure: true, height: 300, width: 400, crop: :fill %>
           <% end %>
         <% else %>
           <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
