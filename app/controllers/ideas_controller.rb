@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show]
+  before_action :set_idea,         only: [:show]
   before_action :set_tags_as_hash, only: [:new]
 
   def index
