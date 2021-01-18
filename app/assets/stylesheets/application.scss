@@ -106,5 +106,16 @@ body {
 // -- AVATAR
 
 
+.btn-outline-primary {
+  border: 1px solid $main !important;
+  color: $main !important;
+
+  &:hover {
+    background: $main !important;
+    color: #fff !important;
+  }
+}
+
+
 // Custom bullet point for <li>
 .container-fluid li:before { content: '\1F525'; margin-left: -20px; margin-right: 10px; }
