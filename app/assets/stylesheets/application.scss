@@ -12,6 +12,10 @@
 @import "components/index";
 @import "pages/index";
 
+// External libraries
+@import "trix/dist/trix"; // ActionText
+@import "./actiontext.scss";
+
 
 body {
   background: $white;
@@ -34,12 +38,6 @@ body {
   }
 }
 
-.ideas-wrapper {
-
-  .idea-title-link {
-
-  }
-}
 
 .main-color { color: $main !important; }
 
@@ -91,6 +89,7 @@ body {
   }
 }
 // -- CARD
+
 
 // AVATAR from LW UI Kit
 .owner-avatar {

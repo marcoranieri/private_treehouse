@@ -32,3 +32,34 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+require("trix")
+require("@rails/actiontext")
+
+
+
+// CUSTOM JS
+
+// document.querySelector("a.navbar-brand img").animate(
+//   {
+//     filter: ['hue-rotate(0deg)', 'hue-rotate(360deg)']
+//   },
+//   {
+//     duration: 20000,
+//     iterations: Infinity
+//   }
+// );
+
+if (document.querySelector("span.main-color")) {
+
+  document.querySelector("span.main-color").animate(
+    {
+      filter: ['hue-rotate(0deg)', 'hue-rotate(360deg)']
+    },
+    {
+      duration: 10000,
+      iterations: Infinity
+    }
+  );
+
+}
