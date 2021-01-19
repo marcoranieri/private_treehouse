@@ -33,7 +33,7 @@
             <%= cl_image_tag photo.key, secure: true, height: 300, width: 400, crop: :fill %>
           <% end %>
         <% else %>
-          <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+          <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" style="filter:hue-rotate(<%=rand(0..360)%>deg)" />
         <% end %>
       <% end %>
 

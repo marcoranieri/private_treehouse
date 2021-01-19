@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
-  before_action :set_idea,         only: [:show]
-  before_action :set_tags_as_hash, only: [:new]
+  before_action :set_idea,         only: [ :show, :edit, :update ]
+  before_action :set_tags_as_hash, only: [ :new ]
 
   def index
     @ideas = Idea.order(created_at: :desc)
@@ -20,6 +20,16 @@ class IdeasController < ApplicationController
     @idea.save! if @idea.valid?
 
     redirect_to :ideas
+  end
+
+  def edit
+
+  end
+
+  def update
+    @idea.update(idea_params)
+
+    redirect_to idea_path(@idea)
   end
 
   private

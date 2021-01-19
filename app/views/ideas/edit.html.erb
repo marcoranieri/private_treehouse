@@ -1,0 +1,32 @@
+<%= simple_form_for @idea do |f| %>
+
+  <%= f.input :title %><br><br>
+
+  <%= f.label :rich_description %>
+  <%= f.rich_text_area :rich_description, class: "customized-min-height" %><br><br>
+
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %><br><br>
+
+
+  <%= f.button :submit, class: "btn btn-outline-success" %>
+<% end %>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<% if @tags.present? %>
+  <h4 class="main-color">#💡<br>Available TAGS</h4>
+  <p><em>Pick some for your idea</em> </p>
+  <ul>
+    <% @tags.each do |tag| %>
+      <li>
+        <%= "#{tag[:name]} (#{tag[:count]})"%>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No TAGS yet..</p>
+<% end %>
