@@ -1,4 +1,5 @@
 <%= link_to "<< back", ideas_path %>
+<%= link_to "EDIT", edit_idea_path(@idea), class: "btn btn-outline-warning" %>
 
 <% if @idea.tag_list.present? %>
   <ul class="idea-tag-list">
@@ -10,3 +11,7 @@
 
 <h1><%= @idea.title %></h1>
 <p><%= @idea.rich_description %></p>
+
+<% @idea.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 600, quality: :auto %>
+<% end %>
