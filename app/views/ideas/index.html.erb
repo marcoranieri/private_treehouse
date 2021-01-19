@@ -24,7 +24,7 @@
 
     <div class="card-product">
       <div class="owner-avatar">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{idea.user.github_username ? idea.user.github_username : "ssaunier"}", class: "avatar-bordered", alt: "avatar" %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{idea.user.github_username.present? ? idea.user.github_username : "ssaunier"}", class: "avatar-bordered", alt: "avatar" %>
       </div>
 
       <%= link_to idea_path(idea), class: "link-images" do %>
