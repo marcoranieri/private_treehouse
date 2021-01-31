@@ -24,6 +24,7 @@
 
     <div class="card-product">
       <div class="owner-avatar">
+        <div class="avatar-username"><%= idea.user.github_username %></div>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{idea.user.github_username.present? ? idea.user.github_username : "ssaunier"}", class: "avatar-bordered", alt: "avatar" %>
       </div>
 

@@ -1,5 +1,9 @@
-<%= link_to "<< back", ideas_path %>
-<%= link_to "EDIT", edit_idea_path(@idea), class: "btn btn-outline-warning" if @idea.user == current_user %>
+<div class="d-flex justify-content-between">
+  <%= link_to "⇐", ideas_path, class: "btn btn-bg btn-outline-danger" %>
+  <%= link_to "EDIT", edit_idea_path(@idea), class: "btn btn-outline-warning" if @idea.user == current_user %>
+</div>
+
+<hr>
 
 <% if @idea.tag_list.present? %>
   <ul class="idea-tag-list">
@@ -9,7 +13,7 @@
   </ul>
 <% end %>
 
-<h1><%= @idea.title %></h1>
+<h1 class="text-center main-color"><%= @idea.title %></h1>
 <p><%= @idea.rich_description %></p>
 
 <% @idea.photos.each do |photo| %>
